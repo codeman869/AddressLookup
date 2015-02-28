@@ -61,6 +61,7 @@ def getLatLong(id, date, time, offense, address)
        puts "Added to address.csv: \n\t%s: \n\tLat:%s Long:%s" % [address, lat, long]
        f = File.open("resume", "w+")
        f.write(@rowCounter)
+       f.close
      end
     mustSleep(ONEDAY)
   elsif response["status"] == "OK" #otherwise write to file
